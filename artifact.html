@@ -1,0 +1,1183 @@
+<title>頭皮改善プログラム</title>
+<meta name="description" content="血流改善と頭皮環境の回復に着目した、エビデンスベースの薄毛改善プログラムのランディングページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   薄毛改善プログラム LP - スタイル
+   ============================================ */
+
+:root {
+  /* 玄武岩（バサルト）を思わせる温かみのあるアースカラー */
+  --ink:        #2c2723;   /* 本文・見出し */
+  --ink-soft:   #57504a;   /* 補助テキスト */
+  --stone:      #8b8177;   /* 罫線・キャプション */
+  --cream:      #fbf9f6;   /* ベース背景 */
+  --beige:      #f3eee7;   /* セクション背景 */
+  --sand:       #e8e0d5;   /* 罫線・カード境界 */
+  --accent:     #a4703f;   /* テラコッタ／銅 */
+  --accent-dk:  #8a5b2e;
+  --sage:       #7d8c78;   /* サブアクセント */
+  --white:      #ffffff;
+
+  --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --sans:  "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+
+  --maxw: 1080px;
+  --gutter: clamp(20px, 5vw, 48px);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.9;
+  font-size: 16px;
+  letter-spacing: .04em;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 0;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.narrow { max-width: 820px; }
+
+/* ---------- 共通パーツ ---------- */
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .22em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(24px, 4.2vw, 34px);
+  line-height: 1.6;
+  letter-spacing: .06em;
+  margin: 0 0 20px;
+}
+
+.sec-title .mark { color: var(--accent); }
+
+.lead {
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 0 0 48px;
+}
+
+section { padding: clamp(64px, 10vw, 110px) 0; }
+.sec-beige { background: var(--beige); }
+.sec-ink { background: var(--ink); color: var(--cream); }
+.sec-ink .lead { color: #b9b1a8; }
+.sec-ink .eyebrow { color: #c99b6b; }
+
+.center { text-align: center; }
+.center .lead { margin-inline: auto; max-width: 620px; }
+
+/* 画像プレースホルダ（本番写真に差し替え） */
+.ph {
+  background:
+    repeating-linear-gradient(135deg, #ece5db 0 10px, #e6ded2 10px 20px);
+  border: 1px solid var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-align: center;
+  min-height: 200px;
+  padding: 12px;
+}
+
+/* ---------- ヘッダー ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(251, 249, 246, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--sand);
+}
+.header__inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 14px var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: .12em;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.4;
+}
+.logo small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: var(--stone);
+  font-weight: 400;
+}
+.gnav { margin-left: auto; display: flex; gap: 26px; }
+.gnav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  letter-spacing: .08em;
+  transition: color .2s;
+}
+.gnav a:hover { color: var(--accent); }
+.header__tel { text-align: right; line-height: 1.3; }
+.header__tel strong {
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: .04em;
+}
+.header__tel span { display: block; font-size: 10px; color: var(--stone); letter-spacing: .1em; }
+
+@media (max-width: 900px) {
+  .gnav, .header__tel { display: none; }
+}
+
+/* ---------- ボタン ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 17px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: .1em;
+  font-weight: 500;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(164, 112, 63, .26);
+}
+.btn--primary:hover { background: var(--accent-dk); transform: translateY(-2px); }
+.btn--ghost {
+  border-color: var(--sand);
+  background: var(--white);
+  color: var(--ink);
+}
+.btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.center .btn-row { justify-content: center; }
+
+/* ---------- ヒーロー ---------- */
+
+.hero {
+  position: relative;
+  padding: clamp(60px, 9vw, 100px) 0 clamp(56px, 8vw, 90px);
+  background:
+    radial-gradient(120% 90% at 85% 10%, #efe6da 0%, rgba(239,230,218,0) 60%),
+    var(--cream);
+  overflow: hidden;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(30px, 5vw, 64px);
+  align-items: center;
+}
+.hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.badge {
+  font-size: 11px;
+  letter-spacing: .1em;
+  border: 1px solid var(--sand);
+  background: var(--white);
+  color: var(--ink-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.badge strong { color: var(--accent); font-weight: 600; }
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 5.4vw, 46px);
+  line-height: 1.62;
+  letter-spacing: .045em;
+  margin: 0 0 24px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent-dk);
+  background: linear-gradient(transparent 70%, rgba(164, 112, 63, .20) 70%);
+}
+.hero p.hero__sub {
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 0 0 32px;
+}
+.hero__note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--stone);
+}
+.hero__visual { position: relative; }
+.hero__visual .ph { min-height: 420px; }
+.hero__stamp {
+  position: absolute;
+  left: -26px;
+  bottom: -26px;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 18px 22px;
+  text-align: center;
+  line-height: 1.5;
+}
+.hero__stamp b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 30px;
+  color: #d9a97a;
+  letter-spacing: .02em;
+}
+.hero__stamp span { font-size: 11px; letter-spacing: .12em; }
+
+@media (max-width: 940px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__visual .ph { min-height: 260px; }
+  .hero__stamp { left: auto; right: 12px; bottom: -20px; padding: 12px 16px; }
+  .hero__stamp b { font-size: 24px; }
+}
+
+/* ---------- 悩みチェック ---------- */
+
+.worry-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--sand);
+  border: 1px solid var(--sand);
+}
+.worry-list li {
+  list-style: none;
+  background: var(--white);
+  padding: 26px 24px;
+  font-size: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.worry-list li::before {
+  content: "✓";
+  color: var(--accent);
+  font-size: 13px;
+  margin-top: 4px;
+}
+.worry-list { margin: 0; padding: 0; }
+.worry-msg {
+  margin-top: 40px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: clamp(18px, 3.2vw, 24px);
+  line-height: 1.9;
+  letter-spacing: .06em;
+}
+
+/* ---------- エビデンス3本柱 ---------- */
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pillar {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 38px 28px;
+  text-align: center;
+}
+.pillar__no {
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: .2em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 18px;
+}
+.pillar__icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--beige);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+.pillar h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: .06em;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+.pillar p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+
+@media (max-width: 820px) { .pillars { grid-template-columns: 1fr; } }
+
+/* ---------- プログラム内容 ---------- */
+
+.steps { display: grid; gap: 28px; }
+.step {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 28px;
+  align-items: start;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 32px;
+}
+.step__no {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: .16em;
+  color: var(--accent);
+  border-right: 1px solid var(--sand);
+  padding-right: 20px;
+  height: 100%;
+}
+.step__no b { display: block; font-size: 30px; line-height: 1.2; color: var(--ink); }
+.step h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  margin: 0 0 10px;
+  letter-spacing: .05em;
+}
+.step p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+.step__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.step__tags span {
+  font-size: 11px;
+  letter-spacing: .08em;
+  background: var(--beige);
+  color: var(--ink-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+@media (max-width: 700px) {
+  .step { grid-template-columns: 1fr; gap: 16px; padding: 26px 22px; }
+  .step__no { border-right: none; border-bottom: 1px solid var(--sand); padding: 0 0 12px; display: flex; align-items: baseline; gap: 10px; }
+  .step__no b { font-size: 24px; }
+}
+
+/* ---------- 症例（Before / After） ---------- */
+
+.cases { display: grid; gap: 40px; }
+.case {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+}
+.case:nth-child(even) .case__media { order: 2; }
+.case__media { display: grid; grid-template-columns: 1fr 1fr; }
+.case__media figure { margin: 0; position: relative; }
+.case__media .ph { min-height: 100%; height: 100%; }
+.case__media figcaption {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(44,39,35,.82);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: .16em;
+  padding: 4px 10px;
+}
+.case__media figure:last-child figcaption { background: var(--accent); }
+.case__body { padding: 36px 34px; }
+.case__meta {
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--stone);
+  margin: 0 0 12px;
+}
+.case__body h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.7;
+  letter-spacing: .05em;
+  margin: 0 0 18px;
+}
+.case__data {
+  display: flex;
+  gap: 24px;
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+  padding: 16px 0;
+  margin-bottom: 20px;
+}
+.case__data div { font-size: 11px; letter-spacing: .1em; color: var(--stone); }
+.case__data b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+.case__voice {
+  background: var(--beige);
+  padding: 18px 20px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+  border-left: 3px solid var(--accent);
+}
+.case__voice cite { display: block; margin-top: 10px; font-size: 11.5px; font-style: normal; color: var(--stone); }
+
+@media (max-width: 820px) {
+  .case { grid-template-columns: 1fr; }
+  .case:nth-child(even) .case__media { order: 0; }
+  .case__media .ph { min-height: 190px; }
+  .case__body { padding: 28px 24px; }
+}
+
+/* ---------- 流れ ---------- */
+
+.flow { counter-reset: flow; display: grid; gap: 0; }
+.flow__item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--sand);
+  align-items: start;
+}
+.flow__item:first-child { border-top: 1px solid var(--sand); }
+.flow__num {
+  font-family: var(--serif);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}
+.flow__item h3 { font-family: var(--serif); font-size: 17px; margin: 8px 0 8px; letter-spacing: .05em; }
+.flow__item p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+
+/* ---------- 料金 ---------- */
+
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.plan {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.plan--reco { border-color: var(--accent); box-shadow: 0 14px 40px rgba(164,112,63,.12); }
+.plan__tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff;
+  font-size: 11px; letter-spacing: .14em; padding: 5px 16px; border-radius: 999px;
+  white-space: nowrap;
+}
+.plan h3 { font-family: var(--serif); font-size: 18px; margin: 0 0 6px; letter-spacing: .06em; }
+.plan__desc { font-size: 12.5px; color: var(--stone); margin: 0 0 20px; min-height: 40px; }
+.plan__price {
+  font-family: var(--serif);
+  font-size: 32px;
+  letter-spacing: .01em;
+  margin: 0 0 4px;
+}
+.plan__price small { font-size: 13px; color: var(--ink-soft); font-family: var(--sans); }
+.plan__tax { font-size: 11px; color: var(--stone); margin: 0 0 22px; }
+.plan ul { list-style: none; margin: 0 0 26px; padding: 0; font-size: 13.5px; color: var(--ink-soft); }
+.plan ul li { padding: 8px 0 8px 20px; border-top: 1px dashed var(--sand); position: relative; }
+.plan ul li::before { content: "―"; position: absolute; left: 0; color: var(--accent); }
+.plan .btn { margin-top: auto; width: 100%; padding-inline: 16px; }
+@media (max-width: 820px) { .plans { grid-template-columns: 1fr; gap: 30px; } .plan__desc { min-height: 0; } }
+
+/* ---------- 講師 ---------- */
+
+.profile { display: grid; grid-template-columns: 320px 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+.profile .ph { min-height: 380px; }
+.profile h3 { font-family: var(--serif); font-size: 22px; margin: 0 0 6px; letter-spacing: .06em; }
+.profile .role { font-size: 12px; letter-spacing: .14em; color: var(--accent); margin: 0 0 20px; }
+.profile p { font-size: 14.5px; color: var(--ink-soft); }
+.sec-ink .profile p { color: #b9b1a8; }
+@media (max-width: 780px) { .profile { grid-template-columns: 1fr; } .profile .ph { min-height: 240px; } }
+
+/* ---------- FAQ ---------- */
+
+.faq { border-top: 1px solid var(--sand); }
+.faq details { border-bottom: 1px solid var(--sand); }
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 44px 22px 40px;
+  font-size: 15.5px;
+  position: relative;
+  font-family: var(--serif);
+  letter-spacing: .04em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::before {
+  content: "Q";
+  position: absolute; left: 0; top: 22px;
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: .1em;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute; right: 8px; top: 20px;
+  color: var(--stone);
+  font-size: 20px;
+  transition: transform .25s;
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .a {
+  padding: 0 8px 26px 40px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  position: relative;
+}
+.faq .a::before {
+  content: "A";
+  position: absolute; left: 0; top: 0;
+  color: var(--stone);
+  font-size: 14px;
+  letter-spacing: .1em;
+}
+
+/* ---------- CTA / フォーム ---------- */
+
+.cta {
+  background: linear-gradient(160deg, #332d28 0%, #241f1b 100%);
+  color: var(--cream);
+  text-align: center;
+}
+.cta .sec-title { color: #fff; }
+.cta .lead { color: #bdb4aa; }
+.cta__tel {
+  margin-top: 34px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: #bdb4aa;
+}
+.cta__tel a {
+  display: block;
+  font-family: var(--serif);
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .04em;
+  margin-top: 6px;
+}
+
+.form {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: clamp(28px, 5vw, 48px);
+  display: grid;
+  gap: 22px;
+  text-align: left;
+}
+.field { display: grid; gap: 8px; }
+.field label { font-size: 13px; letter-spacing: .08em; display: flex; align-items: center; gap: 8px; }
+.req {
+  background: var(--accent); color: #fff;
+  font-size: 10px; padding: 2px 7px; letter-spacing: .08em; border-radius: 3px;
+}
+.field input, .field select, .field textarea {
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 13px 14px;
+  border: 1px solid var(--sand);
+  background: var(--cream);
+  border-radius: 4px;
+  color: var(--ink);
+  width: 100%;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: 2px solid rgba(164,112,63,.35);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+.field textarea { min-height: 120px; resize: vertical; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 640px) { .form__row { grid-template-columns: 1fr; } }
+.form__privacy { font-size: 12px; color: var(--stone); display: flex; gap: 10px; align-items: flex-start; }
+.form__privacy input { width: auto; margin-top: 5px; }
+.form .btn { justify-self: center; min-width: 260px; }
+
+/* ---------- フッター ---------- */
+
+.footer {
+  background: var(--ink);
+  color: #a89f95;
+  padding: 56px 0 100px;
+  font-size: 13px;
+}
+.footer__grid { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; }
+.footer .logo { color: var(--cream); }
+.footer dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; }
+.footer dt { color: #7d746b; letter-spacing: .1em; font-size: 12px; }
+.footer dd { margin: 0; }
+.footer__copy {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid #3d3630;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #7d746b;
+}
+.footer__note { font-size: 11px; line-height: 1.9; color: #7d746b; margin-top: 18px; }
+
+/* ---------- 追従CTA（モバイル） ---------- */
+
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: rgba(251,249,246,.96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--sand);
+  padding: 10px var(--gutter);
+  display: none;
+  gap: 10px;
+  z-index: 60;
+}
+.sticky-cta .btn { flex: 1; padding: 14px 10px; font-size: 14px; }
+@media (max-width: 900px) {
+  .sticky-cta { display: flex; }
+  body { padding-bottom: 76px; }
+}
+
+/* ---------- スクロール演出 ---------- */
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* モバイルのみ改行 */
+.sp-only { display: none; }
+@media (max-width: 600px) { .sp-only { display: block; } }
+
+</style>
+
+<!-- ============ ヘッダー ============ -->
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="#top">
+      ○○ヘッドスパサロン
+      <small>SCALP &amp; HAIR PROGRAM</small>
+    </a>
+    <nav class="gnav">
+      <a href="#reason">選ばれる理由</a>
+      <a href="#program">プログラム</a>
+      <a href="#case">症例</a>
+      <a href="#price">料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="header__tel">
+      <strong>00-0000-0000</strong>
+      <span>受付 10:00 - 22:00</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ヒーロー ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div>
+      <div class="hero__badges">
+        <span class="badge"><strong>医学誌掲載</strong>の理論に基づく</span>
+        <span class="badge">医師監修</span>
+        <span class="badge">施術実績 <strong>8,000</strong> 名以上</span>
+      </div>
+      <h1>「もう年齢だから」と<br>諦めていた髪に、<br><em>まだできることが<br>あります。</em></h1>
+      <p class="hero__sub">
+        育毛剤でも、サプリでもなく。<br>
+        頭皮の血流と環境そのものを整えることから始める、薄毛改善プログラム。
+        50代・60代の方でも、産毛の発生とボリュームの変化を確認しています。
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#contact">無料カウンセリングを予約する</a>
+        <a class="btn btn--ghost" href="#case">症例を見る</a>
+      </div>
+      <p class="hero__note">※ 初回カウンセリング・頭皮診断は無料です。無理な勧誘は一切いたしません。</p>
+    </div>
+    <div class="hero__visual">
+      <div class="ph">MAIN VISUAL<br>施術風景の写真をここに配置</div>
+      <div class="hero__stamp">
+        <b>92<span style="font-size:16px">%</span></b>
+        <span>3ヶ月で頭皮状態の<br>改善を実感 ※自社調べ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お悩み ============ -->
+<section class="sec-beige">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Worries</p>
+      <h2 class="sec-title">こんなお悩み、<span class="mark">ひとつでも</span>当てはまりませんか</h2>
+      <p class="lead">薄毛は「体質」ではなく、多くの場合「頭皮環境」の結果として現れます。</p>
+    </div>
+    <ul class="worry-list reveal">
+      <li>分け目やつむじの地肌が目立ってきた</li>
+      <li>髪が細くなり、ボリュームが出なくなった</li>
+      <li>育毛剤やサプリを試したが変化がない</li>
+      <li>頭皮が硬い・脂っぽい・かゆみがある</li>
+      <li>抜け毛が増え、シャンプーのたびに不安になる</li>
+      <li>クリニックに行くほどではないが相談したい</li>
+    </ul>
+    <p class="worry-msg reveal">
+      その原因の多くは、<br class="sp-only">
+      <span style="color:var(--accent)">頭皮の血流不足と、硬くなった頭皮</span>にあります。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 選ばれる理由：3本柱 ============ -->
+<section id="reason">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="sec-title">「気持ちよかった」で終わらない、<br><span class="mark">エビデンスのある</span>頭皮ケア</h2>
+      <p class="lead">ヘッドスパが数多くある中で、私たちが根拠として掲げているのは次の3つです。</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="pillar__no">EVIDENCE 01</span>
+        <div class="pillar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h6M9 17h4"/></svg>
+        </div>
+        <h3>医学誌に掲載された理論</h3>
+        <p>頭皮への温熱・圧刺激による血流変化について、専門誌にて研究成果が取り上げられています。感覚ではなく、検証された手技です。</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__no">EVIDENCE 02</span>
+        <div class="pillar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        </div>
+        <h3>医師の推薦を受けた手技</h3>
+        <p>婦人科医をはじめとする医療従事者から推薦をいただいています。ホルモンバランスの変化による薄毛にも配慮した設計です。</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__no">EVIDENCE 03</span>
+        <div class="pillar__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
+        </div>
+        <h3>商標登録された独自メソッド</h3>
+        <p>他では受けられない独自のプログラムとして商標登録済み。玄武岩ストーンの温熱を用い、頭皮を深部から緩めていきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ プログラム内容 ============ -->
+<section class="sec-beige" id="program">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Program</p>
+      <h2 class="sec-title">頭皮を<span class="mark">「育つ土壌」</span>に戻す、4つのアプローチ</h2>
+      <p class="lead">髪は土から育つ植物と同じです。生えない原因を、土壌側から順に取り除いていきます。</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step__no">STEP<b>01</b></div>
+        <div>
+          <h3>マイクロスコープによる頭皮診断</h3>
+          <p>毛穴の詰まり・毛根の太さ・血色・硬さを可視化し、現在の頭皮状態を数値と画像で共有します。毎回記録し、変化を一緒に確認していきます。</p>
+          <div class="step__tags"><span>毛穴診断</span><span>血色チェック</span><span>記録の可視化</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__no">STEP<b>02</b></div>
+        <div>
+          <h3>玄武岩ストーンによる温熱ケア</h3>
+          <p>遠赤外線を放つ天然玄武岩を用いて、頭皮と首・肩の深部までじんわりと温めます。硬く冷えた頭皮が緩み、血流が届く状態へ導きます。</p>
+          <div class="step__tags"><span>温熱</span><span>深部の緩和</span><span>首肩の同時ケア</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__no">STEP<b>03</b></div>
+        <div>
+          <h3>血流にアプローチする独自ハンドテクニック</h3>
+          <p>頭部の筋膜と、そこへつながる首・肩・肩甲骨まわりまでを一連で施術。頭皮だけを揉むのではなく、血液が届く経路そのものを整えます。</p>
+          <div class="step__tags"><span>筋膜アプローチ</span><span>商標登録メソッド</span><span>痛みの少ない手技</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__no">STEP<b>04</b></div>
+        <div>
+          <h3>ホームケア設計と生活習慣のご提案</h3>
+          <p>サロンでの施術は月1〜2回。残りの日々をどう過ごすかが結果を左右します。洗い方・乾かし方・睡眠・食事まで、続けられる形でご提案します。</p>
+          <div class="step__tags"><span>シャンプー指導</span><span>睡眠・栄養</span><span>LINEで相談可</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 症例 ============ -->
+<section id="case">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Case Study</p>
+      <h2 class="sec-title">実際に通われた方の、<span class="mark">頭皮の変化</span></h2>
+      <p class="lead">すべてご本人の許諾を得て掲載しています。変化には個人差があり、効果を保証するものではありません。</p>
+    </div>
+    <div class="cases reveal">
+
+      <article class="case">
+        <div class="case__media">
+          <figure><div class="ph">BEFORE 写真</div><figcaption>BEFORE</figcaption></figure>
+          <figure><div class="ph">AFTER 写真</div><figcaption>AFTER</figcaption></figure>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">CASE 01 ／ 58歳・女性 ／ 頭頂部の地肌が透ける</p>
+          <h3>分け目が気にならなくなり、<br>帽子をやめられました。</h3>
+          <div class="case__data">
+            <div>期間<b>10ヶ月</b></div>
+            <div>頻度<b>月1回</b></div>
+            <div>主な変化<b>産毛の発生</b></div>
+          </div>
+          <p class="case__voice">
+            「半年を過ぎたあたりから、生え際に細い毛が立ち上がってきたのが自分でも分かりました。何より、毎回の写真で少しずつ変わっていくのが励みになりました。」
+            <cite>お客様の声</cite>
+          </p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <figure><div class="ph">BEFORE 写真</div><figcaption>BEFORE</figcaption></figure>
+          <figure><div class="ph">AFTER 写真</div><figcaption>AFTER</figcaption></figure>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">CASE 02 ／ 46歳・男性 ／ 抜け毛と頭皮の硬さ</p>
+          <h3>頭皮が柔らかくなってから、<br>抜け毛が落ち着きました。</h3>
+          <div class="case__data">
+            <div>期間<b>6ヶ月</b></div>
+            <div>頻度<b>月2回</b></div>
+            <div>主な変化<b>頭皮の硬さ改善</b></div>
+          </div>
+          <p class="case__voice">
+            「デスクワークで首肩が常に凝っていました。頭だけでなく肩まで施術してもらえるので、施術後は視界まで明るく感じます。」
+            <cite>お客様の声</cite>
+          </p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <figure><div class="ph">BEFORE 写真</div><figcaption>BEFORE</figcaption></figure>
+          <figure><div class="ph">AFTER 写真</div><figcaption>AFTER</figcaption></figure>
+        </div>
+        <div class="case__body">
+          <p class="case__meta">CASE 03 ／ 63歳・女性 ／ 全体のボリュームダウン</p>
+          <h3>美容室で「増えましたね」と<br>言われたのが嬉しくて。</h3>
+          <div class="case__data">
+            <div>期間<b>12ヶ月</b></div>
+            <div>頻度<b>月1回</b></div>
+            <div>主な変化<b>毛量・ハリ</b></div>
+          </div>
+          <p class="case__voice">
+            「年齢的にもう無理だと思っていました。すぐには変わりませんでしたが、続けていれば変わるという説明が最初にあったので、焦らず通えました。」
+            <cite>お客様の声</cite>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 流れ ============ -->
+<section class="sec-beige" id="flow">
+  <div class="wrap narrow">
+    <div class="center">
+      <p class="eyebrow">Flow</p>
+      <h2 class="sec-title">ご相談から施術までの流れ</h2>
+      <p class="lead">初回は約90分。カウンセリングと頭皮診断をしっかり行います。</p>
+    </div>
+    <div class="flow reveal">
+      <div class="flow__item">
+        <div class="flow__num">01</div>
+        <div><h3>ご予約</h3><p>フォームまたはお電話にてご予約ください。ご希望の日時と、気になっている症状をお知らせいただけるとスムーズです。</p></div>
+      </div>
+      <div class="flow__item">
+        <div class="flow__num">02</div>
+        <div><h3>カウンセリング（約20分）</h3><p>これまでのケア、生活習慣、お悩みの経過をお伺いします。無理におすすめすることはありません。</p></div>
+      </div>
+      <div class="flow__item">
+        <div class="flow__num">03</div>
+        <div><h3>頭皮診断（約15分）</h3><p>マイクロスコープで頭皮を確認し、画像をお見せしながら現状と改善の見通しをご説明します。</p></div>
+      </div>
+      <div class="flow__item">
+        <div class="flow__num">04</div>
+        <div><h3>施術（約50分）</h3><p>温熱ケアとハンドテクニックによる施術。多くの方が眠ってしまうほどリラックスできる時間です。</p></div>
+      </div>
+      <div class="flow__item">
+        <div class="flow__num">05</div>
+        <div><h3>ホームケアのご提案</h3><p>次回までの過ごし方をお伝えします。継続の可否はその場で決めていただかなくて構いません。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 料金 ============ -->
+<section id="price">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Price</p>
+      <h2 class="sec-title">料金プラン</h2>
+      <p class="lead">年会費・入会金はいただきません。ご負担のない頻度からお選びください。</p>
+    </div>
+    <div class="plans reveal">
+      <div class="plan">
+        <h3>初回体験</h3>
+        <p class="plan__desc">まずは頭皮の状態を知りたい方へ</p>
+        <p class="plan__price">¥0<small> ／ カウンセリング</small></p>
+        <p class="plan__tax">＋ 体験施術 ¥5,500（税込）</p>
+        <ul>
+          <li>カウンセリング 20分</li>
+          <li>マイクロスコープ頭皮診断</li>
+          <li>体験施術 40分</li>
+        </ul>
+        <a class="btn btn--ghost" href="#contact">この内容で予約する</a>
+      </div>
+      <div class="plan plan--reco">
+        <span class="plan__tag">おすすめ</span>
+        <h3>改善プログラム</h3>
+        <p class="plan__desc">結果を出したい方の標準コース</p>
+        <p class="plan__price">¥16,500<small> ／ 回</small></p>
+        <p class="plan__tax">税込・月1〜2回・6ヶ月目安</p>
+        <ul>
+          <li>90分フルコース（頭皮＋首肩）</li>
+          <li>毎回の頭皮撮影と記録</li>
+          <li>ホームケア設計</li>
+          <li>LINEでの相談サポート</li>
+        </ul>
+        <a class="btn btn--primary" href="#contact">無料相談を予約する</a>
+      </div>
+      <div class="plan">
+        <h3>メンテナンス</h3>
+        <p class="plan__desc">改善後の状態を維持したい方へ</p>
+        <p class="plan__price">¥11,000<small> ／ 回</small></p>
+        <p class="plan__tax">税込・2〜3ヶ月に1回目安</p>
+        <ul>
+          <li>60分コース</li>
+          <li>頭皮状態のチェック</li>
+          <li>季節に応じたケア提案</li>
+        </ul>
+        <a class="btn btn--ghost" href="#contact">相談してみる</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 施術者紹介 ============ -->
+<section class="sec-ink">
+  <div class="wrap profile reveal">
+    <div class="ph">施術者ポートレート</div>
+    <div>
+      <p class="eyebrow">Therapist</p>
+      <h3>○○ ○○</h3>
+      <p class="role">頭皮改善セラピスト ／ 認定インストラクター</p>
+      <p>
+        美容業界で15年、延べ8,000名以上の頭皮に触れてきました。<br>
+        私自身、出産後の抜け毛に悩んだ経験があります。「気持ちよかった」で終わるヘッドスパではなく、
+        本当に髪が変わるケアを探し続けた末にたどり着いたのが、このプログラムです。
+      </p>
+      <p>
+        すぐに結果が出るものではありません。だからこそ、毎回の頭皮画像をお見せし、
+        わずかな変化も一緒に確認しながら伴走します。まずは今の状態を知るところから始めましょう。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <div class="center">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="sec-title">よくあるご質問</h2>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>どのくらいの期間で変化を感じられますか？</summary>
+        <div class="a">頭皮の柔らかさや血色の変化は1〜3ヶ月ほどで実感される方が多く、産毛の発生や毛量の変化は6〜12ヶ月の継続で確認されるケースが中心です。髪には毛周期があるため、焦らず続けていただくことをおすすめしています。</div>
+      </details>
+      <details>
+        <summary>クリニックの治療（投薬）との違いは何ですか？</summary>
+        <div class="a">当サロンは医療機関ではなく、薬剤の処方や医療行為は行いません。頭皮環境と血流を整えることで「髪が育つ土壌」に働きかけるアプローチです。治療中の方も、主治医にご相談のうえ併用いただけるケースがあります。</div>
+      </details>
+      <details>
+        <summary>男性でも通えますか？</summary>
+        <div class="a">はい、男性のお客様も多数いらっしゃいます。完全個室・予約制のため、周囲の目を気にせずご来店いただけます。</div>
+      </details>
+      <details>
+        <summary>痛みはありますか？</summary>
+        <div class="a">強く揉みほぐす施術ではありません。温熱でゆるめてから丁寧に流していくため、多くの方が施術中に眠ってしまわれます。</div>
+      </details>
+      <details>
+        <summary>勧誘が不安です。</summary>
+        <div class="a">初回カウンセリング後にその場で契約を求めることはありません。ご自宅で検討いただいて構いませんし、お断りいただいても一切問題ございません。</div>
+      </details>
+      <details>
+        <summary>白髪や頭皮のかゆみにも対応していますか？</summary>
+        <div class="a">かゆみ・フケ・皮脂の過剰分泌など、頭皮環境に起因するお悩みにも対応しています。白髪については改善をお約束するものではありませんが、頭皮環境の改善に伴う変化をご報告いただくことがあります。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / フォーム ============ -->
+<section class="cta" id="contact">
+  <div class="wrap narrow">
+    <p class="eyebrow">Contact</p>
+    <h2 class="sec-title">まずは、今の頭皮を<br>知ることから。</h2>
+    <p class="lead">カウンセリングと頭皮診断は無料です。<br>「相談だけ」でも、どうぞお気軽にお越しください。</p>
+
+    <form class="form" action="#" method="post" novalidate>
+      <div class="form__row">
+        <div class="field">
+          <label for="name">お名前 <span class="req">必須</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required placeholder="山田 花子">
+        </div>
+        <div class="field">
+          <label for="tel">電話番号 <span class="req">必須</span></label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" required placeholder="09000000000">
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="field">
+          <label for="email">メールアドレス <span class="req">必須</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="example@mail.com">
+        </div>
+        <div class="field">
+          <label for="menu">ご希望のメニュー</label>
+          <select id="menu" name="menu">
+            <option>無料カウンセリングのみ</option>
+            <option selected>無料カウンセリング＋体験施術</option>
+            <option>改善プログラムについて相談したい</option>
+            <option>その他・未定</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="msg">お悩み・ご希望の日時など</label>
+        <textarea id="msg" name="msg" placeholder="例）分け目が気になります。平日夜か土曜の午前を希望します。"></textarea>
+      </div>
+      <label class="form__privacy">
+        <input type="checkbox" name="agree" required>
+        <span>個人情報の取り扱いに同意します。いただいた情報はご連絡以外の目的では使用いたしません。</span>
+      </label>
+      <button class="btn btn--primary" type="submit">この内容で予約・相談する</button>
+    </form>
+
+    <p class="cta__tel">
+      お電話でのご予約はこちら（受付 10:00 - 22:00）
+      <a href="tel:0000000000">00-0000-0000</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ フッター ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="logo">○○ヘッドスパサロン<small>SCALP &amp; HAIR PROGRAM</small></div>
+      </div>
+      <dl>
+        <dt>所在地</dt><dd>東京都○○区○○ 0-0-0 ○○ビル 3F</dd>
+        <dt>アクセス</dt><dd>○○駅 徒歩3分</dd>
+        <dt>営業時間</dt><dd>10:00 - 22:00（完全予約制）</dd>
+        <dt>定休日</dt><dd>不定休</dd>
+      </dl>
+    </div>
+    <p class="footer__note">
+      ※ 当サロンは医療機関ではありません。施術は医療行為ではなく、疾病の診断・治療・予防を目的とするものではありません。<br>
+      ※ 掲載している症例・お客様の声は個人の感想であり、効果を保証するものではありません。変化には個人差があります。
+    </p>
+    <p class="footer__copy">© ○○ヘッドスパサロン All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ 追従CTA ============ -->
+<div class="sticky-cta">
+  <a class="btn btn--ghost" href="tel:0000000000">電話する</a>
+  <a class="btn btn--primary" href="#contact">無料カウンセリング予約</a>
+</div>
+
+<script>
+// スクロールに応じたフェードイン
+(function () {
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(function (el) { io.observe(el); });
+})();
+
+// フォーム送信（送信先未接続のためダミー動作）
+(function () {
+  var form = document.querySelector('.form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    alert('送信先が未設定です。フォームの action 属性に送信先（フォームサービスのURL等）を設定してください。');
+  });
+})();
+
+</script>
